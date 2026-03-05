@@ -1,0 +1,327 @@
+{
+  "_comment": "SMIT FAQ Database - Local matching to save Gemini API tokens",
+  "_version": "2.0.0",
+  "_lastUpdated": "2024-03-04",
+
+  "categories": {
+    "admissions": {
+      "name": "Admissions",
+      "icon": "📋",
+      "description": "Criteria, how to apply, required documents"
+    },
+    "courses": {
+      "name": "Courses",
+      "icon": "📚",
+      "description": "Duration, timings, fee structure, available programs"
+    },
+    "fees": {
+      "name": "Fees & Scholarships",
+      "icon": "💰",
+      "description": "Cost structure, deposits, financial aid"
+    },
+    "hackathons": {
+      "name": "Hackathons & Competitions",
+      "icon": "🏆",
+      "description": "Tech events, coding competitions, prizes"
+    },
+    "events": {
+      "name": "Events & Announcements",
+      "icon": "📢",
+      "description": "Workshops, exam schedules, holiday announcements"
+    },
+    "certificates": {
+      "name": "Certificates & Career",
+      "icon": "🎓",
+      "description": "Certification, job placement, career support"
+    },
+    "general": {
+      "name": "General Information",
+      "icon": "ℹ️",
+      "description": "Contact, locations, timings, requirements"
+    }
+  },
+
+  "faqs": [
+    {
+      "id": "adm-001",
+      "category": "admissions",
+      "keywords": ["admission", "apply", "enroll", "join", "register", "registration", "how to apply", "dakhla"],
+      "question": "How to apply for admission?",
+      "answer": "To apply for SMIT admission:\n\n1️⃣ Visit saylaniwelfare.com/smit\n2️⃣ Click on 'Apply Now' or 'Admissions'\n3️⃣ Fill out the online registration form\n4️⃣ Upload required documents\n5️⃣ Select your preferred course and city\n6️⃣ Submit and wait for test/interview call\n\n📅 Admissions are open throughout the year!"
+    },
+    {
+      "id": "adm-002",
+      "category": "admissions",
+      "keywords": ["eligibility", "requirement", "requirements", "qualification", "criteria", "eligible", "who can join"],
+      "question": "What are the eligibility requirements?",
+      "answer": "SMIT Eligibility Criteria:\n\n📌 Minimum Education: Matric/O-Levels\n📌 Age: 18-35 years (flexible)\n📌 Pakistani CNIC or B-Form\n📌 Basic computer knowledge (helpful but not required)\n📌 Commitment to attend classes regularly\n\n⚠️ Some advanced courses require Intermediate/Graduation."
+    },
+    {
+      "id": "adm-003",
+      "category": "admissions",
+      "keywords": ["document", "documents", "required documents", "papers", "needed"],
+      "question": "What documents are required?",
+      "answer": "Required Documents for SMIT Admission:\n\n📄 CNIC copy (front & back)\n📄 Recent passport-size photograph\n📄 Last educational certificate/marksheet\n📄 Domicile (if available)\n\n💡 Bring originals for verification during interview."
+    },
+    {
+      "id": "adm-004",
+      "category": "admissions",
+      "keywords": ["test", "interview", "entry test", "admission test", "selection"],
+      "question": "Is there an entry test?",
+      "answer": "SMIT Selection Process:\n\n✅ Basic aptitude test (for some courses)\n✅ Short interview\n✅ Document verification\n\nThe test is simple and designed to assess basic understanding. Don't worry - it's not difficult!"
+    },
+    {
+      "id": "adm-005",
+      "category": "admissions",
+      "keywords": ["age", "age limit", "old", "young", "umar"],
+      "question": "What is the age limit?",
+      "answer": "SMIT Age Requirements:\n\n📌 Minimum Age: 18 years\n📌 Maximum Age: 35 years (flexible)\n📌 Some courses may have different limits\n\n💡 Age requirements are flexible for deserving candidates. Contact your nearest campus for special cases."
+    },
+    {
+      "id": "adm-006",
+      "category": "admissions",
+      "keywords": ["last date", "deadline", "when", "admission date", "close"],
+      "question": "What is the admission deadline?",
+      "answer": "SMIT Admission Timeline:\n\n🗓️ Admissions are OPEN YEAR-ROUND!\n📢 New batches start every 2-3 months\n✅ No strict deadline - apply anytime\n⏰ Early registration recommended for seat availability\n\n💡 Check social media for next batch announcements."
+    },
+    {
+      "id": "adm-007",
+      "category": "admissions",
+      "keywords": ["female", "women", "girls", "ladies", "khawateen"],
+      "question": "Can females apply?",
+      "answer": "Yes! SMIT welcomes female students! 👩‍💻\n\n✅ Equal opportunities for all genders\n✅ Separate timings available at some campuses\n✅ Safe and respectful learning environment\n✅ Many successful female graduates\n\n🌟 SMIT encourages women in tech!"
+    },
+    {
+      "id": "adm-008",
+      "category": "admissions",
+      "keywords": ["international", "foreign", "overseas", "abroad", "bahar"],
+      "question": "Can international students apply?",
+      "answer": "International Student Admissions:\n\n🌍 Yes, international students can apply!\n📄 Valid passport/visa required\n🏠 Must attend physical classes in Pakistan\n📞 Contact main campus for special arrangements\n\n💡 Some courses may have online components."
+    },
+
+    {
+      "id": "crs-001",
+      "category": "courses",
+      "keywords": ["course", "courses", "program", "programs", "available", "offer", "what courses"],
+      "question": "What courses are available?",
+      "answer": "SMIT Course Offerings:\n\n💻 Web Development (HTML, CSS, JS, React)\n📱 Mobile App Development (Flutter, React Native)\n🔧 MERN Stack (MongoDB, Express, React, Node)\n🐍 Python & Data Science\n🤖 AI & Machine Learning\n🎨 Graphic Design & UI/UX\n📈 Digital Marketing\n🔐 Cyber Security\n🎬 Video Editing\n🛒 E-commerce & Amazon FBA"
+    },
+    {
+      "id": "crs-002",
+      "category": "courses",
+      "keywords": ["duration", "time", "long", "months", "length", "how long", "kitna arsa"],
+      "question": "What is the duration of courses?",
+      "answer": "Course Durations at SMIT:\n\n⏱️ Short Courses: 3-4 months\n⏱️ Standard Courses: 6-8 months\n⏱️ Advanced Programs: 9-12 months\n\n📅 Classes: 3-4 days per week\n⏰ Session Length: 2-3 hours each"
+    },
+    {
+      "id": "crs-003",
+      "category": "courses",
+      "keywords": ["timing", "timings", "schedule", "shift", "batch", "class time", "morning", "evening"],
+      "question": "What are the class timings?",
+      "answer": "SMIT Class Timings:\n\n🌅 Morning Batch: 9:00 AM - 12:00 PM\n🌤️ Afternoon Batch: 2:00 PM - 5:00 PM\n🌙 Evening Batch: 6:00 PM - 9:00 PM\n\n📌 Choose your preferred shift during registration.\n📅 Classes typically held 3-4 days/week."
+    },
+    {
+      "id": "crs-004",
+      "category": "courses",
+      "keywords": ["best", "popular", "recommend", "top", "which course"],
+      "question": "Which course should I choose?",
+      "answer": "Course Recommendations:\n\n🔥 Most Popular:\n• Web Development (High demand)\n• MERN Stack (Full-stack jobs)\n• Mobile App Development (Growing field)\n\n💼 For Quick Jobs:\n• Graphic Design\n• Digital Marketing\n\n🚀 For Future:\n• AI & Machine Learning\n• Data Science\n\n💡 Choose based on your interest and career goals!"
+    },
+
+    {
+      "id": "fee-001",
+      "category": "fees",
+      "keywords": ["fee", "fees", "cost", "price", "free", "payment", "charges", "paisa", "rupees"],
+      "question": "Is SMIT free?",
+      "answer": "Yes! SMIT is 100% FREE! 🎉\n\n✅ No tuition fees\n✅ No hidden charges\n✅ Free course materials\n✅ Free computer lab access\n\n💡 Some campuses may require a small refundable security deposit (Rs. 1000-2000) which is returned upon course completion.\n\nSaylani Welfare Trust sponsors all education costs!"
+    },
+    {
+      "id": "fee-002",
+      "category": "fees",
+      "keywords": ["deposit", "security", "refundable", "security deposit"],
+      "question": "What is the security deposit?",
+      "answer": "Security Deposit Details:\n\n💰 Amount: Rs. 1,000 - 2,000\n✅ Fully refundable upon course completion\n📝 Required at some campuses only\n🎯 Purpose: Ensure student commitment\n\n⚠️ This is NOT a fee - you get it back when you complete the course successfully!"
+    },
+    {
+      "id": "fee-003",
+      "category": "fees",
+      "keywords": ["scholarship", "financial aid", "help", "support", "needy"],
+      "question": "Are there scholarships available?",
+      "answer": "SMIT Financial Support:\n\n🎓 All courses are already FREE!\n💝 Funded by Saylani Welfare Trust\n🍽️ Some campuses offer free meals\n🚌 Transportation assistance for needy students\n📚 Free course materials\n\n✨ SMIT's mission is to provide quality IT education to everyone, regardless of financial status."
+    },
+    {
+      "id": "fee-004",
+      "category": "fees",
+      "keywords": ["hidden", "extra", "additional", "other charges"],
+      "question": "Are there any hidden charges?",
+      "answer": "No Hidden Charges at SMIT! ✅\n\n❌ No registration fee\n❌ No exam fee\n❌ No certificate fee\n❌ No lab fee\n❌ No material fee\n\n💡 Only a small refundable security deposit at some campuses (Rs. 1000-2000), which is returned upon completion."
+    },
+    {
+      "id": "fee-005",
+      "category": "fees",
+      "keywords": ["payment", "pay", "method", "deposit", "kaise"],
+      "question": "How do I pay the security deposit?",
+      "answer": "Security Deposit Payment:\n\n💵 Cash payment at campus office\n🏦 Bank transfer (details at campus)\n📱 JazzCash/Easypaisa (some campuses)\n\n📋 You'll receive an official receipt\n✅ Keep receipt safe for refund claim\n\n💡 Pay only at official SMIT campus offices."
+    },
+
+    {
+      "id": "hack-001",
+      "category": "hackathons",
+      "keywords": ["hackathon", "hackathons", "coding competition", "competition"],
+      "question": "Does SMIT organize hackathons?",
+      "answer": "Yes! SMIT Tech Events:\n\n🏆 Annual Hackathons\n💻 24-48 hour coding challenges\n👥 Team-based competitions\n🎁 Cash prizes & certificates\n💼 Industry exposure\n\n📅 Major hackathon usually held in December/January\n📱 Follow @smikiofficial for announcements!"
+    },
+    {
+      "id": "hack-002",
+      "category": "hackathons",
+      "keywords": ["prize", "prizes", "reward", "win", "award", "cash"],
+      "question": "What are the hackathon prizes?",
+      "answer": "SMIT Hackathon Prizes:\n\n🥇 1st Place: Rs. 50,000 - 100,000\n🥈 2nd Place: Rs. 30,000 - 50,000\n🥉 3rd Place: Rs. 15,000 - 25,000\n\n🎁 Additional rewards:\n• Certificates for all participants\n• Internship opportunities\n• Industry recognition\n• Goodies & swag\n\n💡 Prizes vary by event and sponsors."
+    },
+    {
+      "id": "hack-003",
+      "category": "hackathons",
+      "keywords": ["participate", "join", "enter", "register hackathon", "how to join"],
+      "question": "How do I participate in hackathons?",
+      "answer": "How to Join SMIT Hackathons:\n\n1️⃣ Must be enrolled SMIT student\n2️⃣ Form a team (2-4 members usually)\n3️⃣ Register when announced\n4️⃣ Submit project idea\n5️⃣ Attend the event\n\n📢 Announcements made via:\n• WhatsApp groups\n• Social media\n• Campus notice boards\n\n💡 Start practicing coding challenges now!"
+    },
+    {
+      "id": "hack-004",
+      "category": "hackathons",
+      "keywords": ["upcoming", "next", "when", "schedule", "2024", "2025"],
+      "question": "When is the next hackathon?",
+      "answer": "Upcoming SMIT Tech Events:\n\n🗓️ Major hackathons: December - January\n💻 Mini coding contests: Monthly\n🎯 Project showcases: Every quarter\n\n📱 Stay updated:\n• Follow @smikiofficial\n• Join campus WhatsApp groups\n• Check website regularly\n\n💡 Announcements made 2-4 weeks before events."
+    },
+    {
+      "id": "hack-005",
+      "category": "hackathons",
+      "keywords": ["beginner", "new", "first time", "experience", "naya"],
+      "question": "Can beginners participate in hackathons?",
+      "answer": "Yes! Beginners Welcome! 🌟\n\n✅ SMIT hackathons have different tracks:\n• Beginner Track (3-6 months students)\n• Intermediate Track\n• Advanced Track\n\n💡 Tips for beginners:\n• Team up with experienced students\n• Focus on simple but complete projects\n• It's about learning, not just winning!\n\n🚀 Many winners were first-time participants!"
+    },
+
+    {
+      "id": "evt-001",
+      "category": "events",
+      "keywords": ["workshop", "workshops", "bootcamp", "training", "event"],
+      "question": "Are there any workshops?",
+      "answer": "SMIT Regular Events:\n\n🛠️ Weekend Workshops (Web Dev, Apps)\n💻 Intensive Bootcamps (1-2 weeks)\n🎤 Guest Speaker Sessions\n💼 Career Counseling\n🏆 Project Showcases\n\n📱 Follow @smikiofficial on social media for announcements!"
+    },
+    {
+      "id": "evt-002",
+      "category": "events",
+      "keywords": ["exam", "examination", "test schedule", "assessment"],
+      "question": "What is the exam schedule?",
+      "answer": "SMIT Assessment Schedule:\n\n📝 Mid-term Assessment: After 50% course completion\n📝 Final Assessment: End of course\n📝 Project Submissions: Throughout the course\n\n✅ 80%+ attendance required\n✅ Must pass assessments for certificate"
+    },
+    {
+      "id": "evt-003",
+      "category": "events",
+      "keywords": ["holiday", "holidays", "vacation", "off", "chutti"],
+      "question": "What are the holidays?",
+      "answer": "SMIT Holiday Schedule:\n\n🗓️ Eid-ul-Fitr: ~1 week\n🗓️ Eid-ul-Adha: ~1 week\n🗓️ National Holidays: As per government\n🗓️ Winter Break: ~1 week (December)\n\n📢 Holiday announcements are made in advance via WhatsApp groups and notice boards."
+    },
+
+    {
+      "id": "cert-001",
+      "category": "certificates",
+      "keywords": ["certificate", "certificates", "certification", "degree", "diploma"],
+      "question": "Do you give certificates?",
+      "answer": "Yes! SMIT Certification:\n\n🎓 Official SMIT Certificate upon completion\n🎓 Industry-recognized credentials\n🎓 Some courses offer international cert prep\n\n📌 Requirements:\n• 80%+ attendance\n• Pass final assessment\n• Complete all projects"
+    },
+    {
+      "id": "cert-002",
+      "category": "certificates",
+      "keywords": ["job", "jobs", "placement", "career", "employment", "hire", "naukri"],
+      "question": "Does SMIT help with jobs?",
+      "answer": "Yes! SMIT Career Support:\n\n💼 Job placement assistance\n📝 Resume/CV building workshops\n🎯 Interview preparation\n💻 LinkedIn profile optimization\n🤝 Industry connections\n💰 Freelancing guidance (Upwork, Fiverr)\n\n🌟 Many graduates successfully start IT careers!"
+    },
+    {
+      "id": "cert-003",
+      "category": "certificates",
+      "keywords": ["internship", "intern", "experience", "practical"],
+      "question": "Does SMIT provide internships?",
+      "answer": "SMIT Internship Opportunities:\n\n✅ Internship assistance for top students\n🏢 Connections with IT companies\n💼 Project-based practical experience\n📝 Recommendation letters\n\n💡 Build a strong portfolio during your course for better internship chances!"
+    },
+
+    {
+      "id": "gen-001",
+      "category": "general",
+      "keywords": ["location", "address", "where", "campus", "branch", "city", "located", "kahan"],
+      "question": "Where is SMIT located?",
+      "answer": "SMIT Campus Locations:\n\n📍 Karachi: Bahadurabad, Gulshan, North Nazimabad, Korangi\n📍 Lahore: Multiple branches\n📍 Islamabad/Rawalpindi\n📍 Faisalabad\n📍 Multan\n📍 Hyderabad\n📍 Peshawar\n📍 Quetta\n\n🌐 Visit saylaniwelfare.com for nearest campus!"
+    },
+    {
+      "id": "gen-002",
+      "category": "general",
+      "keywords": ["contact", "phone", "email", "helpline", "number", "reach"],
+      "question": "How to contact SMIT?",
+      "answer": "Contact SMIT:\n\n🌐 Website: saylaniwelfare.com/smit\n📞 Helpline: 0800-786-786\n📧 Email: info@saylaniwelfare.com\n📱 Social: @smikiofficial\n\n🏢 Or visit your nearest campus during working hours!"
+    },
+    {
+      "id": "gen-003",
+      "category": "general",
+      "keywords": ["laptop", "computer", "device", "pc", "system"],
+      "question": "Do I need a laptop?",
+      "answer": "Laptop Requirement:\n\n✅ Recommended but NOT mandatory\n✅ SMIT provides computer labs\n✅ Lab access during class hours\n\n💡 Having your own laptop helps with:\n• Home practice\n• Assignments\n• Portfolio building\n\nMany students complete courses using only lab computers!"
+    },
+    {
+      "id": "gen-004",
+      "category": "general",
+      "keywords": ["online", "remote", "virtual", "home", "distance"],
+      "question": "Are online classes available?",
+      "answer": "Class Mode at SMIT:\n\n🏫 Primary: On-campus physical classes\n💻 Some courses have online components\n📹 Recorded lectures may be available\n🔄 Hybrid options in special circumstances\n\n✅ Physical attendance recommended for best learning experience!"
+    },
+    {
+      "id": "gen-005",
+      "category": "general",
+      "keywords": ["saylani", "welfare", "trust", "organization", "ngo"],
+      "question": "What is Saylani Welfare?",
+      "answer": "Saylani Welfare International Trust:\n\n🏛️ One of Pakistan's largest welfare organizations\n👤 Founded by Maulana Bashir Farooqi\n🍽️ Provides: Free food (Dastarkhwan)\n📚 Education (SMIT)\n🏥 Healthcare services\n💝 100% donation-funded\n🌍 Serves humanity regardless of religion"
+    },
+    {
+      "id": "gen-006",
+      "category": "general",
+      "keywords": ["attendance", "absent", "leave", "chutti", "attendance requirement"],
+      "question": "What is the attendance requirement?",
+      "answer": "SMIT Attendance Policy:\n\n📊 Minimum Required: 80% attendance\n⚠️ Below 80%: May not receive certificate\n📝 Leave requests: Submit in advance\n🏥 Medical leave: Doctor certificate required\n\n💡 Regular attendance is key to learning and certification!"
+    },
+    {
+      "id": "gen-007",
+      "category": "general",
+      "keywords": ["transfer", "change", "branch", "campus", "shift"],
+      "question": "Can I transfer to another campus?",
+      "answer": "Campus Transfer Policy:\n\n✅ Transfer possible with valid reason\n📝 Submit transfer request at current campus\n⏰ May take 1-2 weeks to process\n📌 Subject to seat availability\n\n💡 Reasons: Relocation, job timing conflicts, etc.\nContact admin for assistance."
+    }
+  ],
+
+  "quickQuestions": [
+    { "id": "qq-1", "text": "How to apply for admission?", "faqId": "adm-001" },
+    { "id": "qq-2", "text": "What courses are available?", "faqId": "crs-001" },
+    { "id": "qq-3", "text": "Is SMIT free?", "faqId": "fee-001" },
+    { "id": "qq-4", "text": "Where is SMIT located?", "faqId": "gen-001" },
+    { "id": "qq-5", "text": "What are the class timings?", "faqId": "crs-003" },
+    { "id": "qq-6", "text": "Do you give certificates?", "faqId": "cert-001" },
+    { "id": "qq-7", "text": "When is the next hackathon?", "faqId": "hack-004" },
+    { "id": "qq-8", "text": "What are hackathon prizes?", "faqId": "hack-002" }
+  ],
+
+  "greetings": {
+    "keywords": ["hi", "hello", "hey", "assalam", "salam", "aoa", "good morning", "good evening"],
+    "response": "Hello! Welcome to SMIT Assistant! 👋\n\nI can help you with:\n📋 Admissions & Requirements\n📚 Courses & Timings\n💰 Fees & Scholarships\n🏆 Hackathons & Competitions\n🎓 Certificates & Career\n\nAsk me anything or click a Quick Question below!"
+  },
+
+  "thanks": {
+    "keywords": ["thank", "thanks", "shukriya", "jazak", "meharbani"],
+    "response": "You're welcome! 😊 Is there anything else I can help you with about SMIT?"
+  },
+
+  "goodbye": {
+    "keywords": ["bye", "goodbye", "khuda hafiz", "allah hafiz", "see you"],
+    "response": "Goodbye! Best of luck with your learning journey at SMIT! 🌟\n\nFeel free to come back anytime you have questions."
+  },
+
+  "fallback": {
+    "response": "I'm not sure about that specific question. 🤔\n\nYou can ask me about:\n• Admissions & Requirements\n• Courses & Timings\n• Fees & Scholarships\n• Hackathons & Competitions\n• Certificates & Careers\n\nOr visit saylaniwelfare.com/smit for more info!"
+  }
+}

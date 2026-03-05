@@ -1,0 +1,13 @@
+# Ignore Python Virtual Environment
+backend/venv/
+venv/
+__pycache__/
+*.pyc
+
+# Ignore Next.js build and dependencies
+frontend/.next/
+frontend/node_modules/
+node_modules/
+
+# Ignore Environment Keys
+.env

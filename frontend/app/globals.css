@@ -1,0 +1,273 @@
+/**
+ * SMIT AI Assistant - Global Styles
+ * ===================================
+ * This file contains all global CSS styles for the SMIT Chatbot application.
+ *
+ * SMIT Brand Colors:
+ * - Primary Blue: #0066cc
+ * - Accent Green: #8cc63f
+ * - Dark Blue: #004d99
+ *
+ * @author SMIT Development Team
+ */
+
+@import "tailwindcss";
+
+/* ========================================
+   CSS VARIABLES - SMIT Brand Colors
+   ======================================== */
+:root {
+  --background: #ffffff;
+  --foreground: #1a202c;
+
+  /* SMIT Official Brand Colors */
+  --smit-blue: #0066cc;
+  --smit-green: #8cc63f;
+  --smit-dark: #004d99;
+  --smit-light: #f8fafc;
+
+  /* Input Colors */
+  --input-text: #1a202c;
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --input-placeholder: #6b7280;
+  --input-focus: #0066cc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-smit-blue: var(--smit-blue);
+  --color-smit-green: var(--smit-green);
+  --color-smit-dark: var(--smit-dark);
+  --color-smit-light: var(--smit-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base body styles */
+body {
+  background: var(--smit-light);
+  color: var(--foreground);
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   CRITICAL FIX: GLOBAL INPUT VISIBILITY
+   ========================================
+   Problem: Input text was white on white background (invisible)
+   Solution: Force dark text color on all input elements
+   ======================================== */
+
+/* Target ALL input types to ensure visibility */
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  /* Force dark text - gray-900 equivalent */
+  color: #1a202c !important;
+  -webkit-text-fill-color: #1a202c !important;
+
+  /* White background */
+  background-color: #ffffff !important;
+
+  /* Border styling */
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 0.75rem;
+
+  /* Padding for comfortable input */
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+
+  /* Smooth transitions */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Placeholder text - gray-500 for visibility */
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+  -webkit-text-fill-color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* Focus state - SMIT Blue border with glow */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: #0066cc !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.25) !important;
+}
+
+/* Date input specific fixes */
+input[type="date"] {
+  color: #1a202c !important;
+  -webkit-text-fill-color: #1a202c !important;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #1a202c !important;
+  -webkit-text-fill-color: #1a202c !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
+  filter: invert(0);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Select dropdown styling */
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+select option {
+  color: #1a202c !important;
+  background-color: #ffffff !important;
+  padding: 0.5rem;
+}
+
+/* Disabled state styling */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f1f5f9 !important;
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ========================================
+   SMIT GRADIENT STYLES
+   ========================================
+   The SMIT brand gradient: Blue to Green
+   Used on buttons, headers, and accents
+   ======================================== */
+
+/* Standard SMIT gradient */
+.smit-gradient {
+  background: linear-gradient(to right, #0066cc, #8cc63f);
+}
+
+/* Hover state for gradient elements */
+.smit-gradient-hover:hover {
+  background: linear-gradient(to right, #004d99, #7ab82e);
+}
+
+/* Text with gradient effect */
+.text-gradient {
+  background: linear-gradient(to right, #0066cc, #8cc63f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   BUTTON STYLES
+   ========================================
+   Primary buttons use SMIT gradient
+   ======================================== */
+
+/* Primary button with SMIT gradient */
+.btn-primary {
+  background: linear-gradient(to right, #0066cc, #8cc63f);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #004d99, #7ab82e);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Quick Question button style */
+.quick-question-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #374151;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.quick-question-btn:hover {
+  border-color: #0066cc;
+  color: #0066cc;
+  background-color: #eff6ff;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.text-smit-blue { color: var(--smit-blue); }
+.text-smit-green { color: var(--smit-green); }
+.bg-smit-blue { background-color: var(--smit-blue); }
+.bg-smit-green { background-color: var(--smit-green); }
+.bg-smit-dark { background-color: var(--smit-dark); }
+.border-smit-blue { border-color: var(--smit-blue); }
+.border-smit-green { border-color: var(--smit-green); }
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for non-input interactive elements */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--smit-blue);
+  outline-offset: 2px;
+  
+}
+
+/* globals.css */
+input, textarea, select {
+  color: #111827 !important; /* Dark Gray for visibility */
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important; /* Light Gray placeholder */
+}
