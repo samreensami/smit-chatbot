@@ -44,3 +44,8 @@ backend/venv/
 /venv
 __pycache__/
 *.pyc
+# Ignore Environment Keys
+.env
+.env.local
+.env.sample
+.env.example
