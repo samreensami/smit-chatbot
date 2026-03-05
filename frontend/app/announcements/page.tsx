@@ -143,7 +143,7 @@ export default function AnnouncementAgent() {
   return (
     <div className="min-h-screen bg-[#f8fafc]">
       {/* Header */}
-      <header className="bg-gradient-to-r from-[#0066cc] to-[#8cc63f] text-white py-4 px-6 shadow-lg">
+      <header className="bg-linear-to-r from-[#0066cc] to-[#8cc63f] text-white py-4 px-6 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <div className="bg-white p-1 rounded-full">
@@ -201,7 +201,7 @@ export default function AnnouncementAgent() {
                   />
                   <button
                     onClick={() => startListening('event')}
-                    className={`p-3 rounded-xl transition-all shadow ${isRecording ? 'bg-red-500 animate-pulse scale-110' : 'bg-gradient-to-r from-[#0066cc] to-[#8cc63f] hover:scale-105'} text-white`}
+                    className={`p-3 rounded-xl transition-all shadow ${isRecording ? 'bg-red-500 animate-pulse scale-110' : 'bg-linear-to-r from-[#0066cc] to-[#8cc63f] hover:scale-105'} text-white`}
                   >
                     🎤
                   </button>
@@ -238,7 +238,7 @@ export default function AnnouncementAgent() {
                   />
                   <button
                     onClick={() => startListening('topic')}
-                    className={`p-3 rounded-xl self-start transition-all shadow ${isRecording ? 'bg-red-500 animate-pulse' : 'bg-gradient-to-r from-[#0066cc] to-[#8cc63f] hover:scale-105'} text-white`}
+                    className={`p-3 rounded-xl self-start transition-all shadow ${isRecording ? 'bg-red-500 animate-pulse' : 'bg-linear-to-r from-[#0066cc] to-[#8cc63f] hover:scale-105'} text-white`}
                   >
                     🎤
                   </button>
@@ -260,7 +260,7 @@ export default function AnnouncementAgent() {
               <button
                 onClick={generateAnnouncement}
                 disabled={isGenerating}
-                className="w-full bg-gradient-to-r from-[#0066cc] to-[#8cc63f] text-white p-4 rounded-xl font-bold shadow-lg hover:opacity-90 transition disabled:opacity-50 flex items-center justify-center gap-2"
+                className="w-full bg-linear-to-r from-[#0066cc] to-[#8cc63f] text-white p-4 rounded-xl font-bold shadow-lg hover:opacity-90 transition disabled:opacity-50 flex items-center justify-center gap-2"
               >
                 {isGenerating ? (
                   <>⏳ Generating...</>
@@ -274,7 +274,7 @@ export default function AnnouncementAgent() {
                 <p className="text-center text-sm text-[#0066cc] font-semibold">{status}</p>
               )}
               {activeAgent && (
-                <p className="text-center text-xs bg-gradient-to-r from-[#0066cc] to-[#8cc63f] text-white py-2 px-4 rounded-full inline-block mx-auto">
+                <p className="text-center text-xs bg-linear-to-r from-[#0066cc] to-[#8cc63f] text-white py-2 px-4 rounded-full inline-block mx-auto">
                   🤖 {activeAgent}
                 </p>
               )}
@@ -291,7 +291,7 @@ export default function AnnouncementAgent() {
               className="bg-white rounded-2xl shadow-xl border-4 border-[#8cc63f] overflow-hidden"
             >
               {/* Card Header */}
-              <div className="bg-gradient-to-r from-[#0066cc] to-[#8cc63f] text-white py-4 px-5">
+              <div className="bg-linear-to-r from-[#0066cc] to-[#8cc63f] text-white py-4 px-5">
                 <div className="flex items-center gap-3">
                   <Image src="/smit-logo.svg" alt="SMIT" width={45} height={45} className="bg-white rounded-full p-1" />
                   <div>
@@ -326,7 +326,7 @@ export default function AnnouncementAgent() {
                   className={`w-full p-4 rounded-xl font-bold flex items-center justify-center gap-2 transition shadow-lg ${
                     isSpeaking
                       ? 'bg-red-500 text-white'
-                      : 'bg-gradient-to-r from-[#0066cc] to-[#8cc63f] text-white hover:opacity-90'
+                      : 'bg-linear-to-r from-[#0066cc] to-[#8cc63f] text-white hover:opacity-90'
                   }`}
                 >
                   {isSpeaking ? '⏹️ Stop Voice' : '🔊 Play Voice'}
@@ -361,7 +361,7 @@ export default function AnnouncementAgent() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-[#0066cc] to-[#8cc63f] text-white py-6 mt-16">
+      <footer className="bg-linear-to-r from-[#0066cc] to-[#8cc63f] text-white py-6 mt-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-sm opacity-90">
             SMIT - Saylani Mass IT Training | Building Future Tech Leaders
