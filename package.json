@@ -1,0 +1,30 @@
+{
+  "name": "smit-ai-communication-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered chatbot system for Saylani Mass IT Training (SMIT)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && venv\\\\Scripts\\\\activate && uvicorn main:app --reload\"",
+    "dev-backend": "cd backend && venv\\\\Scripts\\\\activate && uvicorn main:app --reload",
+    "dev-frontend": "cd frontend && npm run dev",
+    "install-all": "npm run install-frontend && npm run install-backend",
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && venv\\\\Scripts\\\\activate && pip install -r requirements.txt",
+    "start": "cd backend && venv\\\\Scripts\\\\activate && uvicorn main:app --host 0.0.0.0 --port 8000"
+  },
+  "keywords": [
+    "smit",
+    "chatbot",
+    "ai",
+    "education",
+    "communication",
+    "nextjs",
+    "fastapi",
+    "gemini"
+  ],
+  "author": "SMIT Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
