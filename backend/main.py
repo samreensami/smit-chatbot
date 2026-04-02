@@ -1,113 +1,69 @@
-"""
-SMIT Chatbot - FastAPI Backend
-FAQ Agent with local matching + Gemini AI fallback
-"""
-
+import os
+import json
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles # Added for frontend hosting
 from pydantic import BaseModel
 from typing import Optional
 
 from services.faq_checker import check_local_first
 from services.gemini_service import get_gemini_response, get_fallback_response
 
-# Initialize FastAPI app
 app = FastAPI(
     title="SMIT Chatbot API",
     description="FAQ Agent for Saylani Mass IT Training",
     version="1.0.0"
 )
 
-# CORS middleware for frontend communication
+# --- CRITICAL: CORS UPDATE ---
+# Allow localhost for dev and '*' or specific HF domains for production
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["*"], # In production, HF Spaces often use unique subdomains
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
-# Request/Response models
 class ChatRequest(BaseModel):
     message: str
 
-
 class ChatResponse(BaseModel):
     reply: str
-    source: str  # "local" or "ai"
-
-
-# Health check endpoint
-@app.get("/")
-async def root():
-    return {
-        "status": "online",
-        "service": "SMIT Chatbot API",
-        "version": "1.0.0"
-    }
-
+    source: str 
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy"}
+    return {"status": "healthy", "environment": "Hugging Face Spaces"}
 
-
-# Main chat endpoint
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    """
-    Main chat endpoint
-    Logic:
-    1. Check local FAQ first (saves tokens)
-    2. If no local match, call Gemini AI
-    """
     message = request.message.strip()
-
     if not message:
         raise HTTPException(status_code=400, detail="Message cannot be empty")
 
-    # Step 1: Check local FAQ first
+    # Step 1: Local FAQ
     local_answer = check_local_first(message)
-
     if local_answer:
-        return ChatResponse(
-            reply=local_answer,
-            source="local"
-        )
+        return ChatResponse(reply=local_answer, source="local")
 
-    # Step 2: No local match - use Gemini AI
+    # Step 2: Gemini AI Fallback
     try:
         ai_response = get_gemini_response(message)
-        return ChatResponse(
-            reply=ai_response,
-            source="ai"
-        )
+        return ChatResponse(reply=ai_response, source="ai")
     except Exception as e:
-        print(f"Error getting AI response: {e}")
-        return ChatResponse(
-            reply=get_fallback_response(),
-            source="fallback"
-        )
+        # Log error in HF logs
+        print(f"HF Deployment Error: {e}") 
+        return ChatResponse(reply=get_fallback_response(), source="fallback")
 
-
-# FAQ list endpoint (for debugging/admin)
-@app.get("/api/faqs")
-async def get_faqs():
-    """Get all FAQs from local database"""
-    import json
-    import os
-
-    faq_file = os.path.join(os.path.dirname(__file__), "faq_data.json")
-
-    try:
-        with open(faq_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return {"faqs": data.get("faqs", []), "count": len(data.get("faqs", []))}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error loading FAQs: {str(e)}")
-
+# --- NEW: Serve Frontend Static Files ---
+# This assumes your Dockerfile copies the 'out' folder from Next.js build
+frontend_path = os.path.join(os.path.dirname(__file__), "../frontend/out")
+if os.path.exists(frontend_path):
+    app.mount("/", StaticFiles(directory=frontend_path, html=True), name="frontend")
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # HF looks for port 7860 by default
+    port = int(os.environ.get("PORT", 7860))
+    uvicorn.run(app, host="0.0.0.0", port=port)
