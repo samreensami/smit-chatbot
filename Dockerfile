@@ -6,31 +6,27 @@ RUN npm install
 COPY frontend/ ./
 RUN npm run build
 
-# Stage 2: Backend & Final Image
+# Stage 2: Backend Setup
 FROM python:3.9-slim
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies for Python packages
 RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy backend requirements and install
-COPY backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Fix: Correct path for requirements.txt
+COPY backend/requirements.txt ./backend/
+RUN pip install --no-cache-dir -r backend/requirements.txt
 
-# Copy all files
+# Copy the rest of the application
 COPY . .
 
-# Set PYTHONPATH to include backend folder
-ENV PYTHONPATH=/app/backend:$PYTHONPATH
-
-# Copy built frontend from Stage 1 (if serving via FastAPI)
+# Copy built frontend from Stage 1
 COPY --from=frontend-builder /app/frontend/out ./frontend/out
 
-# Hugging Face runs on port 7860 by default
-ENV PORT=7860
+# Port for Hugging Face
 EXPOSE 7860
 
-# Start FastAPI (using uvicorn)
-CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
+# Run the app from the root
+CMD ["python", "-m", "uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "7860"]
