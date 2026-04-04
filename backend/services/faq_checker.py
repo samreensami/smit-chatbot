@@ -26,7 +26,7 @@ import re
 from typing import Optional
 
 # Path to FAQ JSON file
-FAQ_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "faq_data.json")
+FAQ_FILE = os.path.join(os.path.dirname(__file__), "faq_data.json")
 
 # Cache for FAQ data (loaded once)
 _faq_cache = None
