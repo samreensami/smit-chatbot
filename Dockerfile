@@ -22,6 +22,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all files
 COPY . .
 
+# Set PYTHONPATH to include backend folder
+ENV PYTHONPATH=/app/backend:$PYTHONPATH
+
 # Copy built frontend from Stage 1 (if serving via FastAPI)
 COPY --from=frontend-builder /app/frontend/out ./frontend/out
 
@@ -30,5 +33,4 @@ ENV PORT=7860
 EXPOSE 7860
 
 # Start FastAPI (using uvicorn)
-# Make sure your main.py is in the backend folder
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
